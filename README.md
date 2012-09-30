@@ -10,7 +10,7 @@ Your life as it has been is over. Your [Coffee-Script](http://coffeescript.org/)
 
 Install Autoborg. Why do you resist? You must comply.
 
-	npm install -g autoborg
+	$ npm install -g autoborg
 
 Create an __autoborg.json__ and surrender your file system.
 
