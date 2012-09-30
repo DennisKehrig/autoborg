@@ -2,7 +2,7 @@
 
 I am Autoborg of the browser collective.
 
-Your semantic and syntactic distinctiveness will be added to our own. Your code will be assimilated. Resistance is futile.
+Your semantic and syntactic distinctiveness will be added to our own. Your code will be assimilated.
 
 Your life as it has been is over. Your [Coffee-Script](http://coffeescript.org/), [Jade](http://jade-lang.com/) and [Stylus](http://learnboost.github.com/stylus/) will adapt to service us.
 
