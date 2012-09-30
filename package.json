@@ -1,0 +1,63 @@
+{
+	"name": "autoborg",
+	"description": "Automatic compilation of changed files, live updates in the browser",
+	"keywords": [
+		"editor",
+		"edit",
+		"save",
+		"file",
+		"automatic",
+		"detect",
+		"watch",
+		"monitor",
+		"change",
+		"compile",
+		"update",
+		"upload",
+		"refresh",
+		"reload",
+		"browser",
+		"live",
+		"chrome",
+		"remote debugging",
+		"script",
+		"style sheet",
+		"image"
+	],
+	"author": {
+		"name": "Dennis Kehrig"
+	},
+	"version": "0.0.1",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://raw.github.com/DennisKehrig/autoborg/master/LICENSE"
+		}
+	],
+	"engines": {
+		"node": ">=0.6.0"
+	},
+	"directories": {
+		"lib": "./lib"
+	},
+	"main": "./lib/command",
+	"bin": {
+		"autoborg": "./bin/autoborg"
+	},
+	"homepage": "https://github.com/DennisKehrig/autoborg",
+	"bugs": "https://github.com/DennisKehrig/autoborg/issues",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/DennisKehrig/autoborg.git"
+	},
+	"dependencies": {
+		"coffee-script": "~1.3.3",
+		"ansinception": "~0.1.2",
+		"async": "~0.1.22",
+		"uglify-js": "~1.1.1",
+		"coffee-script": "~1.3.3",
+		"jade": "~0.24.0",
+		"stylus": "~0.25.0",
+		"ws": "~0.4.21"
+	}
+}
