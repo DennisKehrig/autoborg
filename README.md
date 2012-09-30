@@ -8,6 +8,10 @@ Your life as it has been is over. Your [Coffee-Script](http://coffeescript.org/)
 
 ### Resistance is futile
 
+Install Autoborg. Why do you resist? You must comply.
+
+	npm install -g autoborg
+
 Create an __autoborg.json__ and surrender your file system.
 
 	{
