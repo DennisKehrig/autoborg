@@ -22,31 +22,6 @@ chrome = require './clients/chrome'
 log = console.log
 
 actions =
-	restart_generator: do ->
-		launch = new Date().getTime()
-		return (path) ->
-			mtime = fs.statSync(path).mtime.getTime()
-			if mtime > launch
-				log 'Restarting'
-				log process.execPath
-				log process.argv
-				log process.cwd()
-				
-				
-				args = process.argv.slice(1)
-				args.unshift process.execPath
-				if process.platform is 'win32'
-					args.unshift "/C" 
-					args.unshift "cmd" 
-				
-				# child_process.exec command, cwd: process.cwd(), env: process.env, (err, stdout, stderr) ->
-					# console.log "TERMINATED"
-					# console.log err
-					# console.log stdout
-					# console.log stderr
-				child_process.spawn args[0], args.slice(1), cwd: process.cwd(), env: process.env, detached: true
-				process.exit()
-
 	reload_clients: (path, response) ->
 		response.reload()
 
@@ -211,9 +186,6 @@ start = (config) ->
 	log "Starting auto compilation"
 	
 	rules = {}
-	rules[configFile] = actions.restart_generator
-	rules[__dirname + '/*.coffee'] = actions.restart_generator
-	rules[__dirname + '/clients/chrome/*.coffee'] = actions.restart_generator
 	for rule, id of config.actions
 		unless actions[id]
 			log "Unknown action #{id}"
