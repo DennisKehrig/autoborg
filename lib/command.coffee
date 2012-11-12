@@ -259,7 +259,7 @@ makeMatcher = (rule) ->
 	return matcher
 
 makeWatchers = (rules) ->
-	matcher = /^((?:[^\/]+\/)*)([^\/]+)$/
+	matcher = /^(\/?(?:[^\/]+\/)*)([^\/]+)$/
 	watchers = []
 
 	for rule, compile of rules
