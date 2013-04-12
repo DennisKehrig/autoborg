@@ -27,7 +27,7 @@
 	"author": {
 		"name": "Dennis Kehrig"
 	},
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"licenses": [
 		{
 			"type": "MIT",
@@ -51,11 +51,10 @@
 		"url": "git://github.com/DennisKehrig/autoborg.git"
 	},
 	"dependencies": {
-		"coffee-script": "~1.3.3",
+		"coffee-script": "~1.6.2",
 		"ansinception": "~0.1.2",
 		"async": "~0.1.22",
 		"uglify-js": "~1.1.1",
-		"coffee-script": "~1.3.3",
 		"jade": "~0.24.0",
 		"stylus": "~0.25.0",
 		"ws": "~0.4.21"

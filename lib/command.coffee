@@ -41,6 +41,22 @@ actions =
 		
 		response.writeFile setExtension(path, 'js'), jsCode
 
+	# Compile Coffee-Script to JavaScript including a source map
+	convert_coffee_to_js_with_sourcemap: (path, response) ->
+		coffeeCode = fs.readFileSync path, 'ascii'
+
+		fileName = paths.basename path
+		result = coffee.compile coffeeCode,
+			sourceMap:     true
+			sourceFiles:   [fileName]
+			filename:      fileName
+			generatedFile: setExtension(fileName, 'js')
+
+		result.js += "\n/*\n//@ sourceMappingURL=" + setExtension(paths.basename(path), 'map') + "\n*/\n"
+		
+		response.writeFile setExtension(path, 'js'), result.js
+		response.writeFile setExtension(path, 'map'), result.v3SourceMap
+
 	# Compile Jade to a require.js module
 	convert_jade_to_js_module: (path, response) ->
 		jadeCodeBuffer = fs.readFileSync path

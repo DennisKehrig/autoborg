@@ -1,4 +1,4 @@
-# Autoborg
+# Autoborg 0.0.4: now with source maps for CoffeeScript
 
 I am Autoborg of the browser collective.
 
@@ -18,7 +18,7 @@ Create an __autoborg.json__ and surrender your file system.
 		"actions": {
 			"index.jade"  : "convert_jade_to_html",
 			"css/*.styl"  : "convert_stylus_to_css",
-			"js/*.coffee" : "convert_coffee_to_js"
+			"js/*.coffee" : "convert_coffee_to_js_with_sourcemap"
 		}
 	}
 
@@ -77,7 +77,6 @@ __vendor/merged.js.json__
 
 ### Perfection is irrelevant
 
-* Only tested on Windows XP SP3 with node.js 0.8.11
 * The compiled files are always in the same directory as the source files
 * Changes to files merged with `merge_and_minify_*` are not detected
 * No wildcards for directories
